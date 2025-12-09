@@ -4,7 +4,7 @@ This README contains all the information needed to prepare the environment, inst
 
 ## 1. Hardware Requirements
 Boards:
-- Arduino Pro Mini 5V / 16 MHz
+- Arduino Pro Mini 3.3V / 8 MHz
 - ESP32 DevKit
 - RN2483 / RN2903 LoRaWAN module
 - MPU-6050 accelerometer
