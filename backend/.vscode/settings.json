@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/0a6024f2-40d0-403e-92e4-a155693a45b4/resourceGroups/appsvc_linux_francecentral/providers/Microsoft.Web/sites/iotProtoApi",
+    "appService.deploySubpath": "."
+}
