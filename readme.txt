@@ -186,7 +186,7 @@ ThemedView	Theme-aware container component
 
 
 -----main/GPS_ESP32.ino - README-----
-Made by Andreas Svartá with ChatGPT.
+README made by Andreas Svartá with help from ChatGPT.
 
 Overview
 This firmware runs on an ESP32 and alternates between:
