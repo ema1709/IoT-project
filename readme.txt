@@ -128,3 +128,58 @@ npm start
 /azure-function
 README.md
 
+# Pet Tracker React app 👋
+
+This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+
+## Get started
+
+1. Install dependencies
+
+   ```bash
+   npm install
+   ```
+
+2. Start the app
+
+   ```bash
+   npx expo start
+   ```
+✅ React App – Libraries Used (Clean, Non-Duplicate Version)
+
+Below is the cleaned list of libraries used in your React Native project, grouped and properly described as required for documentation.
+
+📌 Core Libraries
+Library	Purpose
+react	Core React framework for building UI components
+react-native	Native mobile UI framework used for building screens, styles, and components
+expo platform	Allows running the app in Expo environment
+expo-image	High-performance image component for React Native
+📌 State Management
+Library	Purpose
+@/stores/petStore (Zustand)	Manages global state for pet data (temperature, activity, etc.)
+
+You are using:
+import { usePetStore } from "@/stores/petStore";
+This implies: Zustand state management library.
+
+📌 Navigation
+Library	Purpose
+@react-navigation/native	Used for navigating between screens in the app
+useFocusEffect	Hook that triggers re-renders when screen becomes active
+📌 Icons & UI Components
+Library	Purpose
+@expo/vector-icons (Ionicons)	Full icon pack used for buttons, indicators, and UI elements
+react-native-circular-progress	Circular progress animation used for displaying activity or battery levels
+📌 Custom Components
+
+These come from your own codebase (not external libraries):
+
+Component	Purpose
+MiniMap	Renders map UI for GPS position
+HeroCard	Custom UI card for displaying pet info
+HelloWave	Animated greeting component
+ParallaxScrollView	Parallax header scrolling view
+ThemedText	Text component supporting light/dark mode
+ThemedView	Theme-aware container component
+
