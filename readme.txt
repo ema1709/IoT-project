@@ -183,3 +183,67 @@ ParallaxScrollView	Parallax header scrolling view
 ThemedText	Text component supporting light/dark mode
 ThemedView	Theme-aware container component
 
+
+-----main/GPS_ESP32.ino - README-----
+
+Overview
+This firmware runs on an ESP32 and alternates between:
+- Scanning Wi-Fi access points and reporting strongest identifiable BSSIDs.
+- Reading GNSS latitude and longitude from a GPS module on Serial2.
+- Reading battery percentage and low-voltage alert from a MAX17048 fuel gauge.
+- Sending all telemetry over VSPI to a downstream microcontroller such as a Pro Mini.
+
+Required Libraries
+WiFi.h             
+SPI.h               
+Wire.h             
+TinyGPS.h            
+Adafruit_MAX1704X.h
+
+Wi-Fi Scanning
+Operates in station mode without joining networks.
+Scans visible non-hidden networks.
+Sorts networks by RSSI strength.
+Filters randomized MAC addresses and duplicate BSSIDs from the same router.
+Sends the top three valid networks over SPI in compact form.
+Message prefix: W
+
+GNSS Positioning
+Reads NMEA data on Serial2 at 9600 baud.
+Uses TinyGPS to decode latitude and longitude.
+Used when fewer than three Wi-Fi networks are detected.
+Message prefix: G
+
+Battery Monitoring
+Uses MAX17048 fuel gauge over I2C (SDA pin 21, SCL pin 22).
+Encodes battery information in a single byte.
+Lower seven bits = battery percent from 0 to 100.
+Most significant bit = low-voltage alert flag.
+Message prefix: B
+
+Telemetry Timing
+Telemetry interval is 10 seconds.
+The device alternates:
+Cycle A: Wi-Fi or GNSS message.
+Cycle B: Battery message.
+LED on GPIO 2 turns on during transmissions.
+
+Hardware Interfaces
+
+SPI to Pro Mini (VSPI bus)
+MOSI pin 23
+MISO pin 19
+SCK pin 18
+SS pin 5
+Messages are raw character streams. Device expects one return byte per transmitted byte.
+
+GPS Module (Serial2)
+RX pin 25
+TX pin 26
+Baud 9600
+
+MAX17048 Fuel Gauge (I2C)
+SDA pin 21
+SCL pin 22
+Low-voltage alert configured at 3.3 volts
+
