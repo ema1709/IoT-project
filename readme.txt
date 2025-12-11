@@ -1,6 +1,6 @@
 # Pet Wearable Firmware – Arduino Pro Mini + LoRaWAN (main/main.ino)
 This code has been developed by Emanuele Moschillo and Pietro Ughini and it is aimed to be uploaded on the Arduino Pro mini.
-During the implementation, AI-based development tools (ChatGPT) were used to refine sections of the code, debug specific components, and improve the clarity of the documentation
+During the implementation, AI-based development tools (ChatGPT) were used to refine sections of the code, debug specific components, and improve the clarity of the documentation.
 This README contains all the information needed to prepare the environment, install libraries, configure hardware, and run the firmware for the Pet Wearable project.
 
 ## 1. Hardware Requirements
