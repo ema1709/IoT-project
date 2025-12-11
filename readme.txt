@@ -249,3 +249,13 @@ SDA pin 21
 SCL pin 22
 Low-voltage alert configured at 3.3 volts
 
+ICR18650-26J Battery
+ESP32 Vin, GND (optional)
+Pro-Mini RAW, GND (optional)
+Fuel gauge B+-
+Charging circuit B+- (optional)
+
+TP4056 charging circuit (optional)
+Battery +-
+ESP32 Vin, GND
+Pro-Mini RAW, GND
