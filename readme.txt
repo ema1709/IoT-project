@@ -1,5 +1,5 @@
-# Pet Wearable Firmware – Arduino Pro Mini + ESP32 + LoRaWAN
-
+# Pet Wearable Firmware – Arduino Pro Mini + LoRaWAN
+This code has been developed by Emanuele Moschillo and Pietro Ughini and it is aimed to be uploaded on the Arduino Pro mini.
 This README contains all the information needed to prepare the environment, install libraries, configure hardware, and run the firmware for the Pet Wearable project.
 
 ## 1. Hardware Requirements
